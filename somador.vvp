@@ -1,0 +1,25 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x11ce04960 .scope module, "somador" "somador" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "a";
+    .port_info 1 /INPUT 4 "b";
+    .port_info 2 /OUTPUT 4 "soma";
+o0x120040010 .functor BUFZ 4, C4<zzzz>; HiZ drive
+v0x6000031a8000_0 .net "a", 3 0, o0x120040010;  0 drivers
+o0x120040040 .functor BUFZ 4, C4<zzzz>; HiZ drive
+v0x6000031a8090_0 .net "b", 3 0, o0x120040040;  0 drivers
+o0x120040070 .functor BUFZ 4, C4<zzzz>; HiZ drive
+v0x6000031a8120_0 .net "soma", 3 0, o0x120040070;  0 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "somador_tb.v";
